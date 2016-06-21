@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Play</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="MusicPlay.css">
+</head>
+<body id="bodyType">
+   
+   <audio id="musicPlay" src="" >  <!-- controls="controls" -->
+   </audio>
+
+   <div id="playPart">
+
+     <!-- 专辑信息区 -->
+     <div id="PlayLeft"> 
+         <div id="EpPic">
+         	   <img  id="revolvePic" class="" src="">
+         </div>
+         <h2 id="toEpName"></h2>
+
+         <div id="playType">
+         	<img  id="singerSongPic" class="playTypePic"  src="..\music\Pic\singer.png">
+         	<img  id="allSongPic" class="playTypePic playTypePicBGC"  src="..\music\Pic\list.png">
+         	<img  id="randomSongPic" class="playTypePic"  src="..\music\Pic\random.png">
+         </div>
+   
+         <!-- EpSongList -->
+         <div id="toEpList">
+         	   
+         </div>
+
+     </div>
+     
+     <!-- 播放歌曲 -->
+     <div id="PlayRight">
+       <div id="control">
+           <h2 id="songName">&nbsp</h2>
+
+           <div class="timeArea">
+             <img src="..\music\Pic\time.png" class="timePic" >
+             <div id="musicPaceAll">
+         	    <div id="musicPaceNow"></div>
+         	    <input id="musicPaceRange" type="range" min="0" max="100" value="0" >
+             </div>
+
+             <p id="timeCurrent">00:00/00:00</p>
+           </div>
+           
+           <div class="controlButton">
+             <img id="musicPrev" src="..\music\Pic\prev.png" >
+  	         <img id="musicPP" src="..\music\Pic\play.png" >
+             <img id="musicNext" src="..\music\Pic\next.png" >
+           </div>
+           <div class="vol">
+             <img id="musicVolPic" src="..\music\Pic\low_volume.png" value="1">
+             <input id="volumeRange" type="range" min="0" max="100" value="30" >
+           </div>
+           <div class="lrcPart">
+           	  <div id="lrcRoll">
+           	  	  <!-- <div >123</div>
+           	  	  <div >1233</div> -->
+           	  </div>
+           </div>
+      </div>
+
+     </div>
+
+      <div id="playPartUp" class="triangleUp"></div>
+    </div>
+
+    <div id="ListPart">
+        <div id="ListPartArrow">
+          <div class="ListPartIntro"><div class="triangle1"></div><p>专辑名</p></div>
+          <div class="ListPartIntro"><div class="triangle2"></div><p>歌手名</p></div>
+          <div class="ListPartIntro"><div class="triangle3"></div><p>年份</p></div>
+        </div>
+
+       <div id="headPic" class="headPicpr">
+          <img src="" id="headPicImg">
+       </div>
+       <div id="SingerInrto" class="headSingerInrto">
+         <p>歌手名</p>
+         <p>籍贯</p>
+         <p>生年</p>
+       </div>
+
+       <div id="EpList3D">
+         <img src="..\\picture\\MusicPlay\\Eason\\6.jpg" class="pic1 location1" id="Pic3D1" singer="Eason" EpName="H3M">
+         <div class="dartaP">
+             <p>H3M</p>
+             <p>Eason</p>
+             <p>2009年3月23日</p>
+             <p>陈奕迅</p>
+             <p>香港男歌手</p>
+             <p>1974年7月27日出生</p>
+         </div>
+         <img src="..\\picture\\MusicPlay\\Eason\\5.jpg" class="pic1 location2" id="Pic3D2" singer="Eason" EpName="U87">
+         <div class="dartaP">
+             <p>U87</p>
+             <p>Eason</p>
+             <p>2005年6月7日</p>
+             <p>陈奕迅</p>
+             <p>香港男歌手</p>
+             <p>1974年7月27日出生</p>
+         </div>
+         <img src="..\\picture\\MusicPlay\\Eason\\4.jpg" class="pic1 location2" id="Pic3D3" singer="Eason" EpName="与我常在">
+         <div class="dartaP">
+             <p>与我常在</p>
+             <p>Eason</p>
+             <p>1997年4月12日</p>
+             <p>陈奕迅</p>
+             <p>香港男歌手</p>
+             <p>1974年7月27日出生</p>
+         </div>
+         <img src="..\\picture\\MusicPlay\\Eason\\3.jpg" class="pic1 location2" id="Pic3D4" singer="Eason" EpName="广东精选">
+         <div class="dartaP">
+             <p>广东精选</p>
+             <p>Eason</p>
+             <p>2014年07月18日</p>
+             <p>陈奕迅</p>
+             <p>香港男歌手</p>
+             <p>1974年7月27日出生</p>
+         </div>
+         <img src="..\\picture\\MusicPlay\\Eason\\2.jpg" class="pic1 location2" id="Pic3D5" singer="Eason" EpName="rice && shine">
+         <div class="dartaP">
+             <p>rice && shine</p>
+             <p>Eason</p>
+             <p>2014年5月15日</p>
+             <p>陈奕迅</p>
+             <p>香港男歌手</p>
+             <p>1974年7月27日出生</p>
+         </div>
+       </div>
+
+  <!--      <dir id="backGPic1" class="backGPic1Type"><img src="..\\picture\\MusicPlay\\BGP\\1.png"></dir>
+       <dir id="backGPic2" class="backGPic1Type"><img src="..\\picture\\MusicPlay\\BGP\\1.png"></dir> -->
+       <div id="playButton" class="playButtonBef">
+           <!-- <img id="playEp" src="..\music\Pic\play.png" > -->
+           <div  class="triangle"></div>   
+       </div>
+    </div>
+   
+
+   
+
+
+
+   
+   
+
+   <!-- <div >
+   	<img id="musicPP" src="..\music\Pic\play.png" width="20px" height="20px">
+   </div>
+   <input id="volumeRange" type="range" min="0" max="100" value="30" > -->
+<!--    <input type="button" name="buttonvalue" id="valuebutton">
+   <input type="button" name="buttonvalue" id="valuebutton2">
+   <div class="triangle"></div> -->
+   <script type="text/javascript" src="MusicPlay.js"></script>
+</body>
+</html>

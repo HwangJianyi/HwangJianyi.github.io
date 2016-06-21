@@ -1,0 +1,520 @@
+*{margin:0;padding:0;}
+body{
+  width: 100%;
+  /*height: 1000px;*/
+  margin: 0px;
+  padding: 0;
+  background-color: white;
+  /*overflow: hidden;*/
+  border:solid 5px black;
+}
+
+#head
+  {
+    background-color: #F4FBF2; 
+    color: black;
+    margin:0px;
+    height: 100px;  
+    width: 100%;
+    /*border:solid 1px #E0FFFF; */
+    /*border:solid 5px black;*/
+  }
+
+#guideList{
+	background-color: #3F1C05;
+	color: white;
+	height: 22%;
+	width: 100%;
+}
+#guideList a{
+	text-decoration: none;
+	margin-left: 100px;
+}
+#titleName{
+	background-color: transparent;
+	height: 40%;
+	width: 100%;
+	font-size: 30px;
+    color: #F6AF80;
+    margin-top: 15px;
+    margin-left: 200px;
+
+}
+
+#SelectList{
+	background-color: transparent;
+	height: 26%;
+	width: 100%;
+	font-size: 16px;
+    color: #F6C780;
+    padding-left: 100px;
+}
+#SelectList a{
+   text-decoration: none;
+   margin-left: 30px;
+}
+#bodyBack{
+  background-color: white;
+  width: 80%;
+  margin:40px auto; 
+  /*border:solid 1px black; */
+}
+
+
+#bodyArea{
+  display: inline-block;
+  width: 94%;
+  /*height: 1000px;*/
+  /*background-color: pink;*/
+  margin: 5px 3%;
+  /*border:solid 1px #E0FFFF; */
+}
+
+#areaLeft{
+  float: left;
+  width: 60%;
+  overflow: hidden;
+  /*height: 100px;*/
+  /*background-color: ;*/
+}
+
+#areaRight{
+  float: right;
+  width: 35%;
+  margin-left: 0px;
+  /*height: 100px;*/
+  /*background-color: green;*/
+}
+
+.aLeft1{
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: #F5F5F5;
+  /*margin-top: 30px;*/
+  margin-bottom: 48px;
+  /*border:solid 1px #E0FFFF; */
+}
+
+.aRight1{
+  width: 100%;
+  height: auto;
+  margin-top: 3px;
+  background-color: #F5F5F5;
+  /*background-color: red;*/
+
+  /*border:solid 1px black; */
+}
+
+
+/*左边第二部分*/
+.Left2{
+    padding: 6px;
+    margin-top: 40px;
+    /*background-color: gray;*/
+    /*border-top: solid 5px green;*/
+}
+
+.left2Title{
+   font-size: 20px;
+   color: green;
+   font-weight: bolder;
+   margin:0 10px;
+}
+
+.oneEp{
+	float: left;
+    width: 32%;
+    height: 40%;
+    margin-right: 0px;
+    margin-bottom: 2%;
+                                     /*border:solid 1px gray; */
+    padding: 1px;
+    /*box-shadow: 1px 1px 1px gray;*/
+    text-align: center;
+}
+
+
+.oneEpInfo{
+   position: relative;
+                                    /*border:solid 1px red;*/
+   padding: 3px;
+   /*background-color: white;*/
+}
+
+.oneEpPic{
+	/*margin:2px 3px;*/
+/*	width: 100%;
+	height: 100%;*/
+
+}
+
+ .oneEpPic img{
+ 	width: 100%;
+ 	height: 100%：
+ }
+
+ .oneEpIntro{
+ 	position: absolute;
+ 	top: 3px;
+ 	left: 3px;
+ 	bottom: 3px;
+ 	right: 3px;
+ 	/*background-color: green;*/
+ }
+
+
+.cover{
+	display: table;
+	width: 100%;
+	height: 98%;
+	                                 /*border:solid 2px blue;*/
+}
+
+ .cover-info{
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none; 
+  color: white; 
+  opacity: 0; 
+  font-size: 20px;
+                                     /*border:solid 1px white;*/
+ }
+
+ .cover-info:hover { 
+opacity: 0.9; 
+background: rgba(0,0,0,0.6); /*遮罩*/ 
+} 
+
+
+
+
+
+
+
+/*左边第一部分*/
+#picArea{
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+}
+
+#picList{
+	width: 4200px;
+	height: 400px;
+	position: absolute;
+	z-index: 1;
+}
+
+#picArea:hover .arrow{
+   opacity: 0.6;
+} 
+#picArea:hover .picListStyle a img{
+   opacity: 0.8;
+}
+
+#picList a img{
+	width: 600px;
+	height: 400px;
+    float: left;
+    opacity: 1;
+}
+
+.arrow{
+	width: 40px;
+	height: 40px;
+	display: none;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration:none;
+    position: absolute;
+    top: 180px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+}
+#picArea:hover .arrow{
+	display: block;
+}
+.arrow:hover{
+	background-color: rgba(0,0,0,0.8);
+}
+
+#lastPic{
+	left: 2%;
+}
+#nextPic{
+	right: 2%;
+}
+
+#picDot{
+  position: absolute;
+  bottom: 20px;
+  left: 240px;
+  width: 180px;
+  height: 20px;
+  z-index: 2;
+  opacity: 0;
+  /*background-color: green;*/
+}
+
+#picArea:hover #picDot{
+	opacity: 1;
+}
+
+#picDot span{
+  float: left;
+  /*border:solid 1px white;*/
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 16px;
+  box-shadow: inset 0 0 0 2px white;
+  cursor: pointer;
+}
+
+#picDot span:hover{
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+#picDot span.picDotFull{
+ box-shadow: inset 0 0 0 8px white;
+}
+
+
+
+/*左边第三部分*/
+#notice{
+	/*position: relative;*/
+	width: 99%;
+	height: 420px;
+	overflow: hidden;
+	padding: 0;
+	/*border-top: solid 2px gray;
+	border-bottom: solid 2px gray;
+	border-left: solid 2px gray;
+	border-right: solid 2px gray;*/
+	background-color: #F5F5F5;
+}
+
+#noticeSelect{
+	position:  relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 22px;
+	padding-left: 10px;
+	margin: 0;
+	/*border-bottom: solid 2px green;*/
+    /*background-color: green;*/
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.noticeTitle{
+   display: inline;
+   font-size: 25px;
+   color: orange;
+   font-weight: bolder;
+   margin:0 10px;
+}
+
+
+#noticeSelect a{
+	text-decoration: none;
+    /*color: gray;*/
+
+}
+#noticeSelect a:hover{
+    color: green;
+    text-decoration:underline;
+}
+
+#beSelected {
+	font-weight: bold;
+	color: green;
+    font-size: 20px;
+}
+
+a{color: gray;}
+
+#notice1{
+	/*border:solid 2px red;*/
+	width: auto;
+	height: 382px;
+}
+#notice2{
+	/*border:solid 2px red;*/
+	width: auto;
+	height: 382px;
+}
+#notice3{
+	/*border:solid 2px red;*/
+	width: auto;
+	height: 382px;
+}
+#notice4{
+	/*border:solid 2px red;*/
+	width: auto;
+	height: 382px;
+}
+
+/*每张专辑的样式*/
+.figEpList{
+	float: left;
+	margin:0px;
+	width: 33.33%;
+	height: 50%;
+	overflow: hidden;
+	/*border: solid 1px blue;*/
+}
+
+/*每张专辑的信息*/
+.figEpList figcaption{
+	text-align: center;
+}
+
+.figEpList figcaption a{
+	line-height: 20px;
+	text-decoration: none;
+	font-size: 20px;
+}
+.figEpList figcaption p{
+	font-size: 16px;
+	display: block;
+	line-height: 16px;
+	margin-top: 0;
+}
+/*每张专辑的图片*/
+.figEpList img{
+	margin-left: 10%;
+	margin-top: 4%;
+	margin-bottom: 5px;
+	opacity: 0.9;
+	transform-origin: center;
+	transition: all 0.35s ease-out; 
+	transform:translateY(0px);
+}
+
+hr{
+ width: 92%; 
+ margin: auto;
+ color: green;
+}
+
+
+
+
+
+/*右列*/
+
+.songType{
+  position: relative;
+  width: 100%;
+  
+  background-color: ;
+  /*border:solid 1px blue;*/
+}
+
+.songPic{
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  /*border:solid 1px blue;*/
+}
+
+.songPic img{
+	position: absolute;
+	top: -10px;
+	left: -30px;
+}
+
+
+.songInfo{
+  position: absolute;
+  left: 100px;
+  top: 15px;
+  height: 100%;
+  /*margin-left: 83px;*/
+  /*border: solid 1px blue;*/
+}
+
+.songInfoType1{
+	color: green;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+.songInfoType2{
+	color: gray;
+	font-size: 15px;;
+}
+
+
+.songInfo p{
+	display: inline;
+}
+
+.songMore{
+	position: absolute;
+	left: 0;
+	top: 70px;
+	width: 100%;
+	border: solid 1px white;
+	text-align:center;
+}
+/*
+#songList1:hover .songMore{
+	display: block;
+}*/
+
+.songMore ul{
+	list-style:none;
+}
+.songMore ul li{
+	color: #8FBC8F;
+}
+
+.songListTitle{
+	margin:5px 5px auto 10px;
+	color: green;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+#useNotice{
+	/*position: relative;*/
+    width: 100%;
+    height: 200px;
+    background-image: url(picture\\mainPic\\4.jpg);
+    background-size: 100% 100%;
+}
+
+#useNotice a{
+	margin-left: 15px;
+	line-height: 25px;
+	font-size: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+#useNotice p{
+	margin-left: 15px;
+	line-height: 25px;
+	font-size: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.ahref{
+	padding: 30px;
+}
+
+

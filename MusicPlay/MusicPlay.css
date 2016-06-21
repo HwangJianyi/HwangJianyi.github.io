@@ -1,0 +1,738 @@
+#bodyType{
+	background: -webkit-gradient(linear, 50%  30%, 0% 100%, from(#00abeb), to(#fff));
+	background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#playPart{
+	position: relative;
+	height: 700px;
+	width: 1000px;
+	margin: 0px auto 20px;
+	background-color: rgba(255,255,255,0.3);
+	transform: translateY(-1000px);
+	/*display: none;*/
+	z-index: 8;
+}
+
+.playPartFall{
+	-webkit-animation: Falldown 5s linear 0s 1 forwards;
+	/*-webkit-animation-iteration-count:1;*/
+}
+
+@-webkit-keyframes Falldown {
+    from{
+        transform: translateY(-1000px);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+
+.playPartRiseUp{
+	-webkit-animation: riseUp 5s linear 0s 1 forwards;
+	/*-webkit-animation-iteration-count:1;*/
+}
+
+@-webkit-keyframes riseUp {
+    from{
+        transform: translateY(50px);
+    }
+    to{
+        transform: translateY(-1000px);
+    }
+}
+
+
+#PlayLeft{
+	float: left;
+	margin-left: 30px;
+	width: 400px;
+	min-height: 300px;
+	/*border: solid 1px red;*/
+	/*text-align: center;*/
+}
+
+#toEpName{
+	text-align: center;
+	/*border: solid 1px red;*/
+}
+
+/*歌单*/
+.toEpListOne{
+  width: 90%;
+  height: 20px;
+  margin-left: 5%;
+  margin-top: 2px;
+  padding: 0;
+  font-size: 15px;
+  font-family: "微软雅黑";
+  cursor: pointer;
+  /*border: solid 1px red;*/
+  /*text-align: none;*/
+}
+
+.toEpListOne:hover{
+	background-color: rgba(255,255,255,0.35);
+}
+.playNow{
+	background-color: rgba(255,255,255,0.35);
+}
+
+/*序号*/
+.toEpListNum{
+	float: left;
+	margin-left: 10px;
+	line-height: 20px;
+}
+/*歌名*/
+.toEpListName{
+	float: left;
+    margin-left: 10px;
+    line-height: 20px;
+}
+/*歌时常*/
+.toEpListTime{
+	float: right;
+	margin-right: 10px;
+	line-height: 20px;
+}
+
+#EpPic{
+	position: relative;
+	margin-top: 30px;
+    margin-left: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    overflow: hidden;
+    /*border: solid 1px red;*/
+    z-index: 2;
+}
+
+#EpPic img{
+	position: absolute;
+	top: -25px;
+	left: -25px;
+	width: 250px;
+	height: 250px;
+	z-index: 1;
+
+}
+.EpPicRevolve{
+	-webkit-animation: Circle 10s linear infinite 0s forwards;
+}
+
+@-webkit-keyframes Circle{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+#revolvePic{
+	/*-webkit-transform:rotate(2deg);*/
+}
+
+
+#playType{
+   display: table;
+   margin: 2px auto 5px;
+   height: 20px;
+   /*border: solid 1px red;*/
+}
+
+.playTypePic{
+    float: left;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+}
+
+.playTypePicBGC{
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+#PlayRight{
+	float: right;
+	margin-right: 30px;
+	width: 400px;
+	min-height: 300px;
+	/*border: solid 1px red;*/
+	/*text-align: center;*/
+}
+
+#control{
+	width: 100%;
+	height: 200px;
+	/*border: solid 1px black;*/
+    text-align:center;
+}
+
+
+#songName{
+   color: white;
+   font-size: 18px;
+   margin-bottom: 0;
+}
+
+/*时间轴*/
+.timeArea{
+	width: 100%;
+	height: 22px;
+	padding: 1px;
+	/*border:solid 1px red;*/
+}
+
+.timePic{
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+
+#musicPaceAll{
+	float: left;
+	position: relative;
+    height: 4px;
+    width: 300px;
+    margin: 9px 3px 9px ;
+    box-shadow: -1px 0px 5px 0px white inset;
+    border-radius: 5px;
+    /*overflow: hidden;*/
+}
+
+#musicPaceNow{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4px;
+	width: 0px;
+	border-radius: 5px;
+	background-color: white;
+
+}
+
+
+#musicPaceRange{
+    position: absolute;
+    left: -2.5px;
+    top: -5px;
+    color:#f69;
+    -webkit-appearance: none;
+    margin-top: 2px;
+    background-color: transparent;
+    border-radius: 15px;
+    width: 300px;
+    outline: none;
+
+}
+
+#musicPaceRange::-webkit-slider-thumb {
+   -webkit-appearance: none;
+    cursor: default;
+    top: 1px;
+    cursor: default;
+    top: 1px;
+    height: 10px;
+    width: 10px;
+    background: none repeat scroll 0 0 white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 -1px 1px white inset;
+    /*outline: none;*/
+    visibility: hidden;
+
+}
+
+#musicPaceRange:hover::-webkit-slider-thumb {
+	visibility: visible;
+
+}
+
+
+
+#timeCurrent{
+    float: left;
+    font-size: 10px;
+    margin-top: 4px;
+    color: white;
+}
+
+
+.controlButton{
+    height: 30px;
+    padding: 0;
+    /*border:solid 1px blue;*/
+}
+
+#musicPP{
+	margin: -5px 10px 0;
+    width: 30px; 
+	height: 30px;
+}
+
+#musicPrev,#musicNext{
+	margin: -5px 10px 0;
+	width: 25px; 
+	height: 25px;
+}
+
+
+
+.vol{
+	height: 30px;
+	width: 100%;
+	margin-top: 10px;
+	/*border:solid 1px red;*/
+	
+}
+
+#musicVolPic{
+	float: left;
+	margin-left: 110px;
+	margin-top: 3px;
+	width: 25px; 
+	height: 25px;
+}
+
+#volumeRange{
+	float: left;
+	-webkit-appearance: none;
+    box-shadow: -1px 1px 1px 0px white inset;
+    margin-top: 15px;
+    margin-left: 20px;
+    background-color: transparent;
+    border-top: solid 0.5px white;
+    border-radius: 15px;
+    width: 100px;
+    height: 2px;
+    /*transform: rotate(270deg);*/
+    outline: none;
+}
+
+#volumeRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: default;
+    top: -1px;
+    cursor:auto;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background: scroll #777;
+   -webkit-box-shadow: 0 -1px 1px 10px #fff inset;
+
+
+}
+
+.lrcPart{
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin-top: 20px;
+	overflow: hidden;
+    /*border: solid 1px red;*/
+}
+
+#lrcRoll{
+   position: absolute;
+   top : 160px;
+   width: 100%;
+   /*border: solid 1px yellow;*/
+}
+
+#lrcRoll div{
+	width: 100%;
+	height: 20px;
+	font-size: 18px;
+	color: white;
+	text-align: center;
+}
+
+.lrcRollWhich{
+	background-color: rgba(255,255,255,0.5);
+}
+
+
+
+.triangleUp{
+	position: absolute;
+	bottom: 0;
+	left: 460px;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid rgba(255,255,255,0.8);
+}
+
+
+/*专辑列表*/
+
+#ListPart{
+	position: absolute;
+	top: 50px;
+	left: 250px;
+    height: 500px;
+	width: 800px;
+	margin: 50px auto 20px;
+	background-color: rgba(255,255,255,0.3);
+	overflow: hidden;
+	z-index: 1;
+}
+
+.ListPartFallDown{
+	-webkit-animation: Falldowns 5s linear 0s 1 forwards;
+	/*-webkit-animation-iteration-count:1;*/
+}
+
+@-webkit-keyframes Falldowns {
+    from{
+        transform: translateY(-1000px);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+
+.ListPartRiseUp{
+	-webkit-animation: riseUps 5s linear 0s 1 forwards;
+	/*-webkit-animation-iteration-count:1;*/
+}
+
+@-webkit-keyframes riseUps {
+    from{
+        transform: translateY(50px);
+    }
+    to{
+        transform: translateY(-1000px);
+    }
+}
+
+
+#EpList3D{
+	position: relative;
+	width: 30%;
+	min-height:200px; 
+	-webkit-perspective:800;
+	-webkit-perspective-origin:50% 50%;
+    position: absolute;
+    -webkit-transform-style:-webkit-preserve-3d;
+    /*border:solid 1px red;*/
+}
+
+.pic1{
+	position: absolute;
+	width: 240px;
+	height: 180px;
+	background-color: black;
+	-webkit-transform:rotateY(-5deg);
+    -webkit-transition:-webkit-transform 0.5s,width 0.5s,height 0.5s;
+    margin-top: 80px;
+    border-radius: 5px;
+}
+.picHover{
+/*	width: 240px;
+	height: 180px;*/
+	-webkit-transform:translateX(200px);
+}
+
+/*右上角的信息条*/
+
+.ListPartIntro{
+	-webkit-transition: -webkit-transform 2s ease;
+	position: relative;
+    width: 200px;
+    height: 40px;
+    /*background-color: #afeeee;*/
+    margin-top: -20px;
+    top: 10px;
+    left: 580px;
+    -webkit-transform:rotateZ(315deg) translateX(220px);
+}
+
+.ListPartIntroClick{
+	-webkit-transition: -webkit-transform 2s ease;
+	position: relative;
+    width: 200px;
+    height: 40px;
+    margin-top: -20px;
+    top: 10px;
+    left: 580px;
+	-webkit-transform:rotateZ(315deg) translateX(0px);
+}
+
+#ListPartArrow{
+	
+}
+
+
+.ListPartIntro:nth-of-type(1){
+	margin-left: 0px;
+	background-color: #8fbc8f;
+}
+
+.ListPartIntro:nth-of-type(2){
+	margin-left: 50px;
+	background-color: #48d1cc;
+}
+
+.ListPartIntro:nth-of-type(3){
+	margin-left: 100px;
+	background-color: #008b8b;
+}
+
+.ListPartIntroClick:nth-of-type(1){
+	margin-left: 0px;
+	background-color: #8fbc8f;
+}
+.ListPartIntroClick:nth-of-type(2){
+	margin-left: 50px;
+	background-color: #48d1cc;
+}
+.ListPartIntroClick:nth-of-type(3){
+	margin-left: 100px;
+	background-color: #008b8b;
+}
+
+.triangle1{
+	position: absolute;
+	left: -40px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #8fbc8f;
+    border-left: 20px solid transparent;
+    border-right: 20px solid #8fbc8f;
+    border-bottom: 20px solid #8fbc8f;
+}
+.triangle2{
+	position: absolute;
+	left: -40px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #48d1cc;
+    border-left: 20px solid transparent;
+    border-right: 20px solid #48d1cc;
+    border-bottom: 20px solid #48d1cc;
+}
+
+.triangle3{
+	position: absolute;
+	left: -40px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #008b8b;
+    border-left: 20px solid transparent;
+    border-right: 20px solid #008b8b;
+    border-bottom: 20px solid #008b8b;
+}
+
+
+.ListPartIntro p{
+	position: absolute;
+	top: -5px;
+	font-size: 15px;
+    color: white;
+}
+
+.ListPartIntroClick p{
+	position: absolute;
+	top: -5px;
+	font-size: 15px;
+    color: white;
+}
+
+.dartaP{
+	display: none;
+}
+
+
+/*头像图片*/
+
+
+#headPic{
+	-webkit-transition: -webkit-transform 2s ease;
+}
+.headPicpr{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  top: 30px;
+  left: 80px;
+  /*border:solid 1px red;*/
+  border-radius: 150px;
+  overflow: hidden;
+  -webkit-transform:scale(0);
+}
+
+.headPicprHover{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  top: 30px;
+  left: 80px;
+  /*border:solid 1px red;*/
+  border-radius: 150px;
+  overflow: hidden;
+  -webkit-transform:scale(1);
+}
+
+#headPicImg{
+	width: 150px;
+	height: 150px;
+}
+
+
+
+.headSingerInrto{
+	position: absolute;
+	top: 50px;
+	left: 235px;
+	width: 160px;
+	height: auto;
+    background-color: rgba(255,255,255,0);
+	text-align: center;
+	overflow: hidden;
+	/*border:solid 1px red;*/
+	border-radius: 5px;
+	-webkit-transition: -webkit-transform 2s ease,background-color 0.2s ease;
+	-webkit-transform-origin: 0% 50%;
+	-webkit-transform: scale(0);
+}
+
+.headSingerInrtoClick{
+	position: absolute;
+	top: 50px;
+	left: 235px;
+	width: 160px;
+	height: auto;
+	text-align: center;
+	overflow: hidden;
+	/*border:solid 1px red;*/
+	border-radius: 5px;
+	-webkit-transition: -webkit-transform 2s ease,background-color 0.2s ease;
+	background-color: rgba(255,255,255,0.3);
+	-webkit-transform: scale(1);
+}
+
+
+.headSingerInrto p{
+   line-height: 18px;
+   -webkit-transition: -webkit-transform 0.55s ease;
+   -webkit-transform: translateX(200px);
+   /*display: none; */
+}
+
+.headSingerInrtoClick p{
+   line-height: 18px;
+   -webkit-transition: -webkit-transform 0.55s ease;
+   -webkit-transform: translateX(0px);
+   /*display: block;*/
+}
+
+
+
+.headSingerInrto p:nth-of-type(1){
+	transition-delay: 0.05s;
+	font-size: 18px;
+}
+.headSingerInrto p:nth-of-type(2){
+	transition-delay: 0.25s;
+	font-size: 15px;
+}
+.headSingerInrto p:nth-of-type(3){
+	transition-delay: 0.35s;
+	font-size: 15px;
+}
+.headSingerInrtoClick p:nth-of-type(1){
+	transition-delay: 0.05s;
+	font-size: 18px;
+}
+.headSingerInrtoClick p:nth-of-type(2){
+	transition-delay: 0.25s;
+	font-size: 15px;
+}
+.headSingerInrtoClick p:nth-of-type(3){
+	transition-delay: 0.35s;
+	font-size: 15px;
+}
+
+
+
+/*右下角播放条*/
+
+#playButton{ 
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  width: 100px;
+  height: 100px;
+  border: solid 1px white;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+ .playButtonBef{
+  -webkit-transition: -webkit-transform 2s ease;
+  -webkit-transform: translateY(210px) rotateZ(360deg);
+}
+
+.playButtonAft{
+  -webkit-transition: -webkit-transform 2s ease;
+  -webkit-transform: translateY(0px) rotateZ(0deg);
+}
+
+#playEp{
+	width: 100px;
+	height: 100px;
+
+}
+
+.triangle{
+    margin-top: 20px;
+    margin-left: 30px;
+	width: 0;
+	height: 0;
+	border-left: solid 60px white;
+	border-top: solid 30px transparent;
+	border-bottom: solid 30px transparent;
+}
+
+
+/*气泡*/
+.backGPic1Type{
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+}
+
+#backGPic1{
+	position: absolute;
+	top: 10px;
+	left: 280px;
+}
+
+#backGPic1 img{
+	width: 180px;
+	height: 180px;
+}
+
+#backGPic2{
+	position: absolute;
+	top: 180px;
+	left: 360px;
+}
+
+#backGPic2 img{
+	width: 180px;
+	height: 180px;
+}

@@ -1,0 +1,616 @@
+body {
+    background: -webkit-gradient(linear, 50%  30%, 0% 30%, from(#696969), to(#C0C0C0));
+}
+.guideList{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 120px;
+   background-color: #C0C0C0;
+   /*border:solid 1px red;*/
+}
+
+.guideList h2{
+	margin: 20px auto 0 550px;
+}
+
+.guideList hr{
+	width: 70%;
+	margin-left: 15%;
+	border:solid 0.5px black;
+	
+}
+.endArea{
+	position: absolute;
+	top: 1800px;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #C0C0C0;
+}
+
+#content{
+    position: absolute;
+    top: 200px;
+	width: 1100px;
+	left: 80px;
+	/*margin:auto;*/
+    /*border:solid 1px red;*/
+    background-image: url(..\\EpPic\\bgp1.jpg);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.turnAreaBack{
+	width: 1000px;
+    height: 540px;
+    margin: 20px auto 30px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+/*轮播part*/
+#turnArea{
+	position: relative;
+	width: 1000px;
+	height: 500px;
+	/*border: solid 2px black;*/
+	margin: 20px auto 50px;
+    overflow: hidden;
+    /*background-color: rgba(25,25,112,0.8);*/
+    background: transparent;
+}
+
+#turnAreaLeft{
+  position: absolute;
+  top: -205px;
+  left: 82.3px;
+  width: 556px;
+  height: 900px;
+  border: solid 1px black;
+  transform-origin: 0 0;
+  transform: rotate(21.8deg);
+  overflow: hidden;
+  /*display: none;*/
+}
+
+#turnAreaRight{
+  position: absolute;
+   left: 400px;
+   top: 500px;
+
+  width: 900px;
+  height: 556px;
+  border: solid 1px black;
+  transform-origin: 0 0;
+  transform: rotate(291.8deg);
+  overflow: hidden;
+}
+
+.turnAreaPicLeft{
+  transform-origin: 0 0;
+  transform: rotate(338.2deg);
+}
+
+.turnAreaPicRight{
+  transform-origin: 0 100%;
+  transform: rotate(68.2deg);
+}
+
+.bodytypp{
+  position: fixed;
+}
+
+/*-专辑part-*/
+
+/*专辑图片区域的总样式*/
+#EpPart{
+	height: 800px;
+	padding:0px;
+	border:solid 2px gray;
+	background-color: yellow;
+	overflow: hidden;
+	margin:100px 50px 50px;
+}
+
+/*每张专辑的样式*/
+.figEpList{
+	float: left;
+	position: relative;
+	margin:0px;
+	width: 33.333%;
+	height: 33.333%;
+	overflow: hidden;
+}
+
+/*每张专辑的信息*/
+.figEpList figcaption{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	/*color: #FFF; */
+}
+
+/*每张专辑的图片*/
+.figEpList img{
+	opacity: 0.9;
+	transform-origin: center;
+	transition: all 0.35s ease-out; 
+	transform:translateY(0px);
+}
+/*---------------------------------------------------------------------------*/
+/*第一张专辑的样式*/
+.EpList1{
+	background-color: black;
+}
+
+/*.EpList1 img{
+   opacity: 0.8;
+}*/
+
+.EpList1 figcaption{
+	padding: 20px;
+}
+
+.EpList1 figcaption h2{
+  color: black;
+  transition: transform 0.35s ease;
+  transform: translateY(-320px);
+}
+.EpList1:hover figcaption h2{
+  transform: translateY(0px);
+}
+.EpList1 figcaption p{
+   background-color: rgba(255,255,255,0.4);
+   color: #333;
+   margin:3px;
+   text-align: center;
+   transition: transform 0.35s ease;
+   transform: translateX(-320px);
+}
+
+.EpList1:hover figcaption p{
+	transform: translateX(0px);
+}
+
+.EpList1:hover figcaption p:nth-of-type(2n-1){
+    transition-delay: 0.05s;
+}
+
+.EpList1:hover figcaption p:nth-of-type(2n){
+    transition-delay: 0.25s;
+}
+
+.EpList1:hover img{
+  width: 110%;
+  height: 110%;
+  opacity: 0.5; 
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*第二张专辑的样式*/
+.EpList2{
+	background-color: gray;
+}
+.EpList2 figcaption{
+	width: 100%;
+	height: 100%;
+}
+
+.EpList2 figcaption h2{
+	margin-top: 15%;
+	margin-left: 15%;
+	transform: translateY(-500px);
+	transition: transform 0.35s ease-out;
+}
+.EpList2:hover figcaption h2{
+   transform: translateY(0px);
+}
+
+.EpList2 figcaption p{
+	background-color: rgba(255,255,255,0.4);
+	width: 75%;
+	margin-left: 13%;
+	transform: translateX(100px);
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+}
+
+.EpList2 figcaption div{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	border: solid 2px white;
+    transform: translateY(-500px) skew(0deg);
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+}
+
+.EpList2:hover figcaption p{
+   transform: translateX(0px);
+   opacity: 1;
+}
+
+.EpList2:hover figcaption div{
+  transform: translateY(0px) skew(360deg);
+  opacity: 1;
+}
+
+.EpList2:hover img{
+  width: 110%;
+  height: 110%;
+  opacity: 0.5; 
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*第三张专辑的样式*/
+.EpList3{
+	background-color: black;
+}
+
+/*.EpList1 img{
+   opacity: 0.8;
+}*/
+
+.EpList3 figcaption{
+	padding: 20px;
+}
+
+.EpList3 figcaption h2{
+  color: #6A5ACD;
+  transition: transform 0.35s ease;
+  transform: translateY(-320px);
+}
+.EpList3:hover figcaption h2{
+  transform: translateY(0px);
+}
+.EpList3 figcaption p{
+   background-color: rgba(255,255,255,0.4);
+   color: #333;
+   margin:3px;
+   text-align: center;
+   transition: transform 0.35s ease;
+   transform: translateX(420px);
+}
+
+.EpList3:hover figcaption p{
+	transform: translateX(0px);
+}
+
+.EpList3:hover figcaption p:nth-of-type(2n-1){
+    transition-delay: 0.05s;
+}
+
+.EpList3:hover figcaption p:nth-of-type(2n){
+    transition-delay: 0.15s;
+}
+
+.EpList3:hover img{
+  width: 110%;
+  height: 110%;
+  opacity: 0.5; 
+}
+
+/*---------------------------------------------------------------------------*/
+/*第四张专辑的样式*/
+.EpList4{
+	background-color: black;
+}
+
+/*.EpList1 img{
+   opacity: 0.8;
+}*/
+
+.EpList4 figcaption{
+	padding: 20px;
+}
+
+.EpList4 figcaption h2{
+  color: gray;
+  transition: transform 0.35s ease;
+  transform: skew(90deg);
+  transition-delay: 0.05s;
+}
+.EpList4:hover figcaption h2{
+  transform: skew(0deg);
+}
+.EpList4 figcaption p{
+   background-color: rgba(255,255,255,0.4);
+   color: #333;
+   margin:3px;
+   text-align: center;
+   transition: transform 0.35s ease;
+   transform: skew(90deg);
+   transition-delay: 0.05s;
+}
+
+.EpList4:hover figcaption p{
+   transform: skew(0deg);
+}
+
+.EpList4:hover figcaption p:nth-of-type(2n-1){
+    transition-delay: 0.05s;
+}
+
+.EpList4:hover figcaption p:nth-of-type(2n){
+    transition-delay: 0.25s;
+}
+
+.EpList4:hover img{
+  width: 110%;
+  height: 110%;
+  opacity: 0.5; 
+}
+
+/*---------------------------------------------------------------------------*/
+/*第五张专辑的样式*/
+.EpList5{
+	background-color: gray;
+}
+.EpList5 figcaption{
+	width: 100%;
+	height: 100%;
+}
+
+.EpList5 figcaption h2{
+	margin-top: 15%;
+	margin-left: 15%;
+	transform: scale(2.5,2.5);
+	transition: transform 0.35s ease-out;
+}
+.EpList5:hover figcaption h2{
+   transform: scale(1,1);
+}
+
+.EpList5 figcaption p{
+	margin-left: 15%;
+	transform: scale(2,2);
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+}
+
+.EpList5 figcaption div{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	border: solid 2px white;
+    transform: translateY(-500px) skew(0deg);
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+	transform: scale(1.5,1.5);
+}
+
+.EpList5:hover figcaption p{
+   transform: scale(1,1);
+   opacity: 1;
+}
+
+.EpList5:hover figcaption div{
+  transform: scale(1,1);
+  opacity: 1;
+}
+
+.EpList5:hover img{
+  width: 110%;
+  height: 110%;
+  opacity: 0.5; 
+}
+
+/*---------------------------------------------------------------------------*/
+/*第六张专辑的样式*/
+.EpList6{
+	background-color: gray;
+}
+.EpList6 figcaption{
+	width: 100%;
+	height: 100%;
+}
+
+.EpList6 figcaption h2{
+	margin-top: 16%;
+	margin-left: 18%;
+	/*transform: scale(2.5,2.5);*/
+	opacity: 0;
+	transition: transform 0.35s ease-out;
+}
+.EpList6:hover figcaption h2{
+   /*transform: scale(1,1);*/
+   opacity: 1;
+}
+
+.EpList6 figcaption p{
+	margin-left: 18%;
+	margin-top: 0px;
+	line-height: 8px;
+	/*transform: scale(2,2);*/
+	opacity: 0;
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+}
+
+
+.EpList6:hover figcaption p{
+   /*transform: scale(1,1);*/
+   opacity: 1;
+}
+
+
+.EpList6 figcaption .topBottom{
+	position: absolute;
+	top: 15%;
+	left: 10%;
+	width: 80%;
+	height: 70%;
+	border-top: solid 2px white;
+	border-bottom: solid 2px white;
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+	transform: scale(0,0);
+}
+.EpList6:hover figcaption .topBottom{
+  transform: scale(1,1);
+  opacity: 1;
+}
+
+.EpList6 figcaption .leftRight{
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	width: 70%;
+	height: 80%;
+	border-left: solid 2px white;
+	border-right: solid 2px white;
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+	transform: scale(0,0);
+}
+.EpList6:hover figcaption .leftRight{
+  transform: scale(1,1);
+  transition-delay: 0.05s;
+  opacity: 1;
+}
+
+.EpList6:hover img{
+  width: 110%;
+  height: 110%;
+  opacity: 0.5; 
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*第七张专辑的样式*/
+.EpList7{
+	background-color: gray;
+}
+.EpList7 figcaption{
+	width: 100%;
+	height: 100%;
+}
+
+.EpList7 figcaption h2{
+	margin-top: 15%;
+	margin-left: 15%;
+	transform: translateY(15px);
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+}
+.EpList7:hover figcaption h2{
+   transform: translateY(0px);
+   opacity: 1;
+}
+
+.EpList7 figcaption p{
+	margin-left: 15%;
+	line-height: 10px;
+	transform: translateY(15px);
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+}
+
+.EpList7:hover figcaption p{
+   transform: translateY(0px);
+   opacity: 1;
+}
+.EpList7 figcaption div{
+	position: absolute;
+	background-color: rgba(255,255,255,0.8);
+	top: 100%;
+	left: 0%;
+	width: 500px;
+	height: 80%;
+	border: solid 2px white;
+	transform-origin: 0% 0%;
+	transform: rotate(360deg);	
+	transition: transform 0.35s ease-out;
+	opacity: 0.1;
+}
+
+.EpList7 figcaption div p{
+    margin-left: 35%;
+    margin-top: 5px;
+}
+
+.EpList7:hover figcaption div{
+  transform: rotate(340deg);	
+  opacity: 1;
+}
+
+.EpList7:hover img{
+/*  width: 110%;
+  height: 110%;*/
+  opacity: 0.5; 
+  transform:translateY(-10px);
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*第九张专辑的样式*/
+.EpList9{
+	background-color: gray;
+}
+.EpList9 figcaption{
+	width: 100%;
+	height: 100%;
+}
+
+.EpList9 figcaption h2{
+	margin-top: 15%;
+	margin-left: 60%;
+	transform: translateY(15px);
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+}
+.EpList9:hover figcaption h2{
+   transform: translateY(0px);
+   opacity: 1;
+}
+
+.EpList9 figcaption p{
+	margin-left: 75%;
+
+	transform: translateY(15px);
+	transition: transform 0.35s ease-out;
+	opacity: 0;
+}
+
+.EpList9:hover figcaption p{
+   transform: translateY(0px);
+   opacity: 1;
+}
+.EpList9 figcaption div{
+	position: absolute;
+	background-color: rgba(255,255,255,0.8);
+	top: 100%;
+	right: 0%;
+	width: 500px;
+	height: 80%;
+	border: solid 2px white;
+	transform-origin: 100% 0%;
+	transform: rotate(0deg);	
+	transition: transform 0.35s ease-out;
+	opacity: 0.1;
+}
+
+.EpList9 figcaption div p{
+	margin-left: 45%;
+}
+
+.EpList9:hover figcaption div{
+  transform: rotate(20deg);	
+  opacity: 1;
+}
+
+.EpList9:hover img{
+/*  width: 110%;
+  height: 110%;*/
+  opacity: 0.5; 
+  transform:translateY(-10px);
+}
